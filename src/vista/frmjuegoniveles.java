@@ -9,6 +9,7 @@ import apps.Niveles;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +26,17 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
         btn2.setText(String.valueOf(this.letras.charAt(1)));
         btn3.setText(String.valueOf(this.letras.charAt(2)));
         btn4.setText(String.valueOf(this.letras.charAt(3)));
+    }
+
+    public String BotonSeleccionado(String letra) {
+        String button;
+        if ("Desconocido".equals(letra)) {
+            button = "btn" + "N2";
+        } else {
+            button = "btn" + letra + "1";
+        }
+
+        return button;
     }
 
     public void saberNiveles(Niveles a) {
@@ -62,7 +74,7 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
         rePintarLabel();
         setVisible(true);
         setLocationRelativeTo(null);
-        addKeyListener(this);
+        jpanelTeclado.requestFocus();
     }
 
     /**
@@ -91,7 +103,7 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
         btnC1 = new javax.swing.JButton();
         btnV1 = new javax.swing.JButton();
         btnB1 = new javax.swing.JButton();
-        btnN3 = new javax.swing.JButton();
+        btnN1 = new javax.swing.JButton();
         btnM1 = new javax.swing.JButton();
         btnQ1 = new javax.swing.JButton();
         btnW1 = new javax.swing.JButton();
@@ -118,88 +130,91 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
 
         jPanel1.setLayout(null);
 
-        btnS1.setText("S");
-        btnS1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnS1ActionPerformed(evt);
+        jpanelTeclado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jpanelTecladoKeyPressed(evt);
             }
         });
 
+        btnS1.setBackground(new java.awt.Color(255, 255, 255));
+        btnS1.setText("S");
+
+        btnF1.setBackground(new java.awt.Color(255, 255, 255));
         btnF1.setText("F");
 
+        btnG1.setBackground(new java.awt.Color(255, 255, 255));
         btnG1.setText("G");
 
+        btnD1.setBackground(new java.awt.Color(255, 255, 255));
         btnD1.setText("D");
 
+        btnA1.setBackground(new java.awt.Color(255, 255, 255));
         btnA1.setText("A");
 
+        btnH1.setBackground(new java.awt.Color(255, 255, 255));
         btnH1.setText("H");
 
+        btnJ1.setBackground(new java.awt.Color(255, 255, 255));
         btnJ1.setText("J");
-        btnJ1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnJ1ActionPerformed(evt);
-            }
-        });
 
+        btnK1.setBackground(new java.awt.Color(255, 255, 255));
         btnK1.setText("K");
 
+        btnL1.setBackground(new java.awt.Color(255, 255, 255));
         btnL1.setText("L");
 
+        btnN2.setBackground(new java.awt.Color(255, 255, 255));
         btnN2.setText("Ñ");
 
+        btnZ1.setBackground(new java.awt.Color(255, 255, 255));
         btnZ1.setText("Z");
 
+        btnX1.setBackground(new java.awt.Color(255, 255, 255));
         btnX1.setText("X");
-        btnX1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnX1ActionPerformed(evt);
-            }
-        });
 
+        btnC1.setBackground(new java.awt.Color(255, 255, 255));
         btnC1.setText("C");
 
+        btnV1.setBackground(new java.awt.Color(255, 255, 255));
         btnV1.setText("V");
 
+        btnB1.setBackground(new java.awt.Color(255, 255, 255));
         btnB1.setText("B");
 
-        btnN3.setText("N");
+        btnN1.setBackground(new java.awt.Color(255, 255, 255));
+        btnN1.setText("N");
 
+        btnM1.setBackground(new java.awt.Color(255, 255, 255));
         btnM1.setText("M");
-        btnM1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnM1ActionPerformed(evt);
-            }
-        });
 
+        btnQ1.setBackground(new java.awt.Color(255, 255, 255));
         btnQ1.setText("Q");
 
+        btnW1.setBackground(new java.awt.Color(255, 255, 255));
         btnW1.setText("W");
-        btnW1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnW1ActionPerformed(evt);
-            }
-        });
 
+        btnE1.setBackground(new java.awt.Color(255, 255, 255));
         btnE1.setText("E");
 
+        btnR1.setBackground(new java.awt.Color(255, 255, 255));
         btnR1.setText("R");
 
+        btnT1.setBackground(new java.awt.Color(255, 255, 255));
         btnT1.setText("T");
 
+        btnY1.setBackground(new java.awt.Color(255, 255, 255));
         btnY1.setText("Y");
 
+        btnU1.setBackground(new java.awt.Color(255, 255, 255));
         btnU1.setText("U");
-        btnU1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnU1ActionPerformed(evt);
-            }
-        });
 
+        btnI1.setBackground(new java.awt.Color(255, 255, 255));
         btnI1.setText("I");
 
+        btnO1.setBackground(new java.awt.Color(255, 255, 255));
         btnO1.setText("O");
 
+        btnP1.setBackground(new java.awt.Color(255, 255, 255));
         btnP1.setText("P");
 
         btnSpace1.setText("space");
@@ -266,7 +281,7 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnB1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnN3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnN1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnM1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(btnSpace1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -307,14 +322,14 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
                     .addComponent(btnC1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnZ1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnM1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnN3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnN1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSpace1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jpanelTeclado);
-        jpanelTeclado.setBounds(150, 180, 570, 248);
+        jpanelTeclado.setBounds(150, 180, 580, 248);
 
         btnsalir.setText("SALIR");
         btnsalir.setOpaque(false);
@@ -458,31 +473,102 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
         }
     }//GEN-LAST:event_btn4KeyPressed
 
-    private void btnS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnS1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnS1ActionPerformed
+    private void jpanelTecladoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpanelTecladoKeyPressed
+        String Entrada = KeyEvent.getKeyText(evt.getKeyCode());
 
-    private void btnJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJ1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnJ1ActionPerformed
+        System.out.println("" + BotonSeleccionado(Entrada));
 
-    private void btnX1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnX1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnX1ActionPerformed
+        switch (BotonSeleccionado(Entrada)) {
 
-    private void btnM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnM1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnM1ActionPerformed
+            case "btnS1":
+                btnS1.setBackground(Color.yellow);
+                break;
+            case "btnF1":
+                btnF1.setBackground(Color.yellow);
+                break;
+            case "btnG1":
+                btnG1.setBackground(Color.yellow);
+                break;
+            case "btnD1":
+                btnD1.setBackground(Color.yellow);
+                break;
+            case "btnA1":
+                btnA1.setBackground(Color.yellow);
+                break;
+            case "btnH1":
+                btnH1.setBackground(Color.yellow);
+                break;
+            case "btnJ1":
+                btnJ1.setBackground(Color.yellow);
+                break;
+            case "btnK1":
+                btnK1.setBackground(Color.yellow);
+                break;
+            case "btnL1":
+                btnL1.setBackground(Color.yellow);
+                break;
+            case "btnN2":
+                btnN2.setBackground(Color.yellow);
+                break;
+            case "btnZ1":
+                btnZ1.setBackground(Color.yellow);
+                break;
+            case "btnX1":
+                btnX1.setBackground(Color.yellow);
+                break;
+            case "btnC1":
+                btnC1.setBackground(Color.yellow);
+                break;
+            case "btnV1":
+                btnV1.setBackground(Color.yellow);
+                break;
+            case "btnB1":
+                btnB1.setBackground(Color.yellow);
+                break;
+            case "btnN1":
+                btnN1.setBackground(Color.yellow);
+                break;
+            case "btnM1":
+                btnM1.setBackground(Color.yellow);
+                break;
+            case "btnQ1":
+                btnQ1.setBackground(Color.yellow);
+                break;
+            case "btnW1":
+                btnW1.setBackground(Color.yellow);
+                break;
+            case "btnE1":
+                btnE1.setBackground(Color.yellow);
+                break;
+            case "btnR1":
+                btnR1.setBackground(Color.yellow);
+                break;
+            case "btnT1":
+                btnT1.setBackground(Color.yellow);
+                break;
+            case "btnY1":
+                btnY1.setBackground(Color.yellow);
+                break;
+            case "btnU1":
+                btnU1.setBackground(Color.yellow);
+                break;
+            case "btnI1":
+                btnI1.setBackground(Color.yellow);
+                break;
+            case "btnO1":
+                btnO1.setBackground(Color.yellow);
+                break;
+            case "btnP1":
+                btnP1.setBackground(Color.yellow);
+                break;
+            case "btnEspacio1":
+                btnSpace1.setBackground(Color.yellow);
+                break;
+        }
+        //System.out.println("Key Character: " + evt.getKeyChar() + "; Key Code: " + KeyEvent.getKeyText(evt.getKeyCode()));
+    }//GEN-LAST:event_jpanelTecladoKeyPressed
 
-    private void btnW1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnW1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnW1ActionPerformed
-
-    private void btnU1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnU1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnU1ActionPerformed
-
-    /*z
+    /*z+
     public static void main(String args[]) {
 
         try {
@@ -515,65 +601,36 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
-    private javax.swing.JButton btnA;
     private javax.swing.JButton btnA1;
-    private javax.swing.JButton btnB;
     private javax.swing.JButton btnB1;
-    private javax.swing.JButton btnC;
     private javax.swing.JButton btnC1;
-    private javax.swing.JButton btnD;
     private javax.swing.JButton btnD1;
-    private javax.swing.JButton btnE;
     private javax.swing.JButton btnE1;
-    private javax.swing.JButton btnF;
     private javax.swing.JButton btnF1;
-    private javax.swing.JButton btnG;
     private javax.swing.JButton btnG1;
-    private javax.swing.JButton btnH;
     private javax.swing.JButton btnH1;
-    private javax.swing.JButton btnI;
     private javax.swing.JButton btnI1;
-    private javax.swing.JButton btnJ;
     private javax.swing.JButton btnJ1;
-    private javax.swing.JButton btnK;
     private javax.swing.JButton btnK1;
-    private javax.swing.JButton btnL;
     private javax.swing.JButton btnL1;
-    private javax.swing.JButton btnM;
     private javax.swing.JButton btnM1;
-    private javax.swing.JButton btnN;
     private javax.swing.JButton btnN1;
     private javax.swing.JButton btnN2;
-    private javax.swing.JButton btnN3;
-    private javax.swing.JButton btnO;
     private javax.swing.JButton btnO1;
-    private javax.swing.JButton btnP;
     private javax.swing.JButton btnP1;
-    private javax.swing.JButton btnQ;
     private javax.swing.JButton btnQ1;
-    private javax.swing.JButton btnR;
     private javax.swing.JButton btnR1;
-    private javax.swing.JButton btnS;
     private javax.swing.JButton btnS1;
-    private javax.swing.JButton btnSpace;
     private javax.swing.JButton btnSpace1;
-    private javax.swing.JButton btnT;
     private javax.swing.JButton btnT1;
-    private javax.swing.JButton btnU;
     private javax.swing.JButton btnU1;
-    private javax.swing.JButton btnV;
     private javax.swing.JButton btnV1;
-    private javax.swing.JButton btnW;
     private javax.swing.JButton btnW1;
-    private javax.swing.JButton btnX;
     private javax.swing.JButton btnX1;
-    private javax.swing.JButton btnY;
     private javax.swing.JButton btnY1;
-    private javax.swing.JButton btnZ;
     private javax.swing.JButton btnZ1;
     private javax.swing.JButton btnsalir;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jpanelTeclado;
     private javax.swing.JLabel lblimagen;
     // End of variables declaration//GEN-END:variables
@@ -585,13 +642,7 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent ke) {
-        /* 
-        String c = String.valueOf(ke.getKeyChar());
-        validarCorrecto(c);
-        System.out.println(ke.getKeyChar());
-        //String elem = btn1.getText();
-        //lbl1.setText(""+ke.getKeyChar());
-         */
+
     }
 
     @Override
