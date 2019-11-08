@@ -134,6 +134,9 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jpanelTecladoKeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jpanelTecladoKeyReleased(evt);
+            }
         });
 
         btnS1.setBackground(new java.awt.Color(255, 255, 255));
@@ -475,11 +478,9 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
 
     private void jpanelTecladoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpanelTecladoKeyPressed
         String Entrada = KeyEvent.getKeyText(evt.getKeyCode());
-
-        System.out.println("" + BotonSeleccionado(Entrada));
+        // System.out.println("" + BotonSeleccionado(Entrada));
 
         switch (BotonSeleccionado(Entrada)) {
-
             case "btnS1":
                 btnS1.setBackground(Color.yellow);
                 break;
@@ -567,6 +568,97 @@ public class frmjuegoniveles extends javax.swing.JFrame implements KeyListener {
         }
         //System.out.println("Key Character: " + evt.getKeyChar() + "; Key Code: " + KeyEvent.getKeyText(evt.getKeyCode()));
     }//GEN-LAST:event_jpanelTecladoKeyPressed
+
+    private void jpanelTecladoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpanelTecladoKeyReleased
+        String Entrada = KeyEvent.getKeyText(evt.getKeyCode());
+
+        switch (BotonSeleccionado(Entrada)) {
+            case "btnS1":
+                btnS1.setBackground(Color.WHITE);
+                break;
+            case "btnF1":
+                btnF1.setBackground(Color.WHITE);
+                break;
+            case "btnG1":
+                btnG1.setBackground(Color.WHITE);
+                break;
+            case "btnD1":
+                btnD1.setBackground(Color.WHITE);
+                break;
+            case "btnA1":
+                btnA1.setBackground(Color.WHITE);
+                break;
+            case "btnH1":
+                btnH1.setBackground(Color.WHITE);
+                break;
+            case "btnJ1":
+                btnJ1.setBackground(Color.WHITE);
+                break;
+            case "btnK1":
+                btnK1.setBackground(Color.WHITE);
+                break;
+            case "btnL1":
+                btnL1.setBackground(Color.WHITE);
+                break;
+            case "btnN2":
+                btnN2.setBackground(Color.WHITE);
+                break;
+            case "btnZ1":
+                btnZ1.setBackground(Color.WHITE);
+                break;
+            case "btnX1":
+                btnX1.setBackground(Color.WHITE);
+                break;
+            case "btnC1":
+                btnC1.setBackground(Color.WHITE);
+                break;
+            case "btnV1":
+                btnV1.setBackground(Color.WHITE);
+                break;
+            case "btnB1":
+                btnB1.setBackground(Color.WHITE);
+                break;
+            case "btnN1":
+                btnN1.setBackground(Color.WHITE);
+                break;
+            case "btnM1":
+                btnM1.setBackground(Color.WHITE);
+                break;
+            case "btnQ1":
+                btnQ1.setBackground(Color.WHITE);
+                break;
+            case "btnW1":
+                btnW1.setBackground(Color.WHITE);
+                break;
+            case "btnE1":
+                btnE1.setBackground(Color.WHITE);
+                break;
+            case "btnR1":
+                btnR1.setBackground(Color.WHITE);
+                break;
+            case "btnT1":
+                btnT1.setBackground(Color.WHITE);
+                break;
+            case "btnY1":
+                btnY1.setBackground(Color.WHITE);
+                break;
+            case "btnU1":
+                btnU1.setBackground(Color.WHITE);
+                break;
+            case "btnI1":
+                btnI1.setBackground(Color.WHITE);
+                break;
+            case "btnO1":
+                btnO1.setBackground(Color.WHITE);
+                break;
+            case "btnP1":
+                btnP1.setBackground(Color.WHITE);
+                break;
+            case "btnEspacio1":
+                btnSpace1.setBackground(Color.WHITE);
+                break;
+        }
+    }//GEN-LAST:event_jpanelTecladoKeyReleased
 
     /*z+
     public static void main(String args[]) {
